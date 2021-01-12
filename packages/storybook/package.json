@@ -9,7 +9,10 @@
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
     "@storybook/react": "^6.1.11",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1"
   },
   "dependencies": {},
   "scripts": {
