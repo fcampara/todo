@@ -1,10 +1,7 @@
-import React from 'react';
-import './button.scss';
-import { ButtonProps } from './types';
+import React from 'react'
+import './button.scss'
+import { ButtonProps } from './types'
 
-/**
- * Primary UI component for user interaction
- */
 const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
@@ -12,7 +9,7 @@ const Button: React.FC<ButtonProps> = ({
   label,
   ...props
 }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
   return (
     <button
       type="button"
@@ -22,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {label}
     </button>
-  );
-};
+  )
+}
 
 export default Button

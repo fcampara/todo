@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard'
+    'standard',
+    'plugin:react-hooks/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,5 +21,28 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 'off',
+    'no-use-before-define': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal'],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before'
+          }
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+        'newlines-between': 'never',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true
+        }
+      }
+    ]
   }
 }
